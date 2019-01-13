@@ -49,7 +49,15 @@ export class HomePage {
    */
   onLoeschButton() {
 
-    this.eingabeName = "";
+    if (this.eingabeName.length === 0) {
+
+      this.zeigeDialog( "Unnötig",
+                        "Eingabe-Feld ist schon leer!" );
+
+    } else {
+
+      this.eingabeName = "";
+    }    
   }
 
 
