@@ -1,9 +1,18 @@
 # Ionic app "Hallo Name"
 
-Simple app with [Ionic 3](https://ionicframework.com). 
+Simple app with [Ionic 3](https://ionicframework.com) with just one page, which demonstrates how
+to implement event handling methods for buttons and to access the value of a text input element.
 
 <br>
 
+----
+## Screenshots
+
+![Screenshot von "Ionic Labs" (links Android, rechts iOS)](screenshot.png)
+
+Screenshot was taken from [Ionic Lab](https://blog.ionicframework.com/ionic-lab/). 
+
+<br>
 
 ----
 ## License
