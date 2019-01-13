@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +7,61 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  /* 
+   * Für Wert von <ion-input>-Element zur Eingabe von Namen, wird wegen [(ngModel)]="eingabeName"
+   * automatisch "gebunden".
+   */
+  private eingabeName : string = '';
 
+  /*
+   * Konstruktor; die Argumente werden als Member-Variablen angelegt, weil sie mit Zugriffs-Modifizierern
+   * ("public" und "private") versehen sind.
+   */
+  constructor(public  navCtrl  : NavController, 
+              private alertCtrl: AlertController) { }
+
+
+  /*
+   * Event-Handler-Methode für Button "Begrüße mich!".
+   */
+  onBegruessenButton() {
+
+    let eingabeString = this.eingabeName.trim();
+
+    if ( eingabeString.length > 0 ) {
+
+      this.zeigeDialog( "Begrüßung", 
+                        "Hallo " + eingabeString + "!" );
+
+    } else {
+
+      this.zeigeDialog( "Fehler",
+                        "Kein Name eingegeben!" );
+    }
+
+    this.eingabeName = "";
   }
+
+
+  /*
+   * Event-Handler-Methode für Button "Begrüße mich!".
+   */
+  onLoeschButton() {
+
+    this.eingabeName = "";
+  }
+
+
+  /*
+   * Hilfsmethode zur Anzeige einer Nachricht mit einem Alert. 
+   */
+  zeigeDialog(titel: string, nachricht: string) {
+
+    let alert = this.alertCtrl.create({ title   : titel,
+                                        subTitle: nachricht,
+                                        buttons : ['Ok']
+                                      });
+    alert.present();
+  }  
 
 }

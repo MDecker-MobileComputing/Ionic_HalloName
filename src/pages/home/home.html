@@ -10,14 +10,14 @@
 
   <ion-item>
       <ion-label fixed>Vorname:</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="eingabeName"></ion-input>
   </ion-item>
 
   &nbsp;  
 
-  <button ion-button block>Begrüße mich!</button>
+  <button ion-button block (click)="onBegruessenButton()" >Begrüße mich!</button>
   &nbsp;
-  <button ion-button block>Löschen</button>
+  <button ion-button block (click)="onLoeschButton()" >Löschen</button>
 
 </ion-content>
 
