@@ -1,5 +1,6 @@
 {
-  "name": "HalloName",
+  "name": "HalloName_WinterVL",
   "integrations": {},
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "id": "cc068445"
 }
