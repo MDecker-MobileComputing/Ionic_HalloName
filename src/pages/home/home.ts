@@ -27,7 +27,7 @@ export class HomePage {
    */
   onBegruessenButton() {
 
-    let eingabeString = this.eingabeName.trim();
+    let eingabeString : string = this.eingabeName.trim();
 
     if ( eingabeString.length > 0 ) {
 
