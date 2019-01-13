@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
+
 @Component({
-  selector: 'page-home',
+  selector:  'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
@@ -11,7 +12,7 @@ export class HomePage {
    * Für Wert von <ion-input>-Element zur Eingabe von Namen, wird wegen [(ngModel)]="eingabeName"
    * automatisch "gebunden".
    */
-  private eingabeName : string = '';
+  private eingabeName : string = "";
 
   /*
    * Konstruktor; die Argumente werden als Member-Variablen angelegt, weil sie mit Zugriffs-Modifizierern
@@ -22,7 +23,7 @@ export class HomePage {
 
 
   /*
-   * Event-Handler-Methode für Button "Begrüße mich!".
+   * Event-Handler-Methode für den Button "Begrüße mich!".
    */
   onBegruessenButton() {
 
@@ -44,7 +45,7 @@ export class HomePage {
 
 
   /*
-   * Event-Handler-Methode für Button "Begrüße mich!".
+   * Event-Handler-Methode für Lösch-Button.
    */
   onLoeschButton() {
 
@@ -53,14 +54,15 @@ export class HomePage {
 
 
   /*
-   * Hilfsmethode zur Anzeige einer Nachricht mit einem Alert. 
+   * Hilfsmethode zur Anzeige einer Nachricht mit einem Alert-Element.
    */
   zeigeDialog(titel: string, nachricht: string) {
 
-    let alert = this.alertCtrl.create({ title   : titel,
+    let alert = this.alertCtrl.create({ title   : titel,                                  
                                         subTitle: nachricht,
-                                        buttons : ['Ok']
+                                        buttons : [ "Ok" ] 
                                       });
+                                      
     alert.present();
   }  
 
