@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Hallo Name
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label position="fixed">Vorname:</ion-label>
+        <ion-input type="text" [(ngModel)]="eingabeName"></ion-input>
+    </ion-item>
+    
+    &nbsp;
+    
+    <ion-button expand="full" (click)="onBegruessenButton()" >Begrüße mich</ion-button>    
+    &nbsp;
+    <ion-button expand="full" (click)="onLoeschButton()" >Löschen</ion-button>
+
+</ion-content>
