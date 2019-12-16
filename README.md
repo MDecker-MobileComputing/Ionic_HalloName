@@ -15,7 +15,7 @@ Screenshot was taken from [Ionic Lab](https://blog.ionicframework.com/ionic-lab/
 <br>
 
 ----
-## Running the app locally ##
+## Run the app locally ##
 
 After cloning this repository enter the following command to download all the required NPM packages into folder `node_modules`:
 ````
@@ -37,12 +37,14 @@ ionic serve --lab
 <br>
 
 ----
-## Building the app ##
+## Build the app for Android ##
 
 To build the app for Android (i.e. to get the APK file) you need to have [Cordova](https://www.npmjs.com/package/cordova) configured on your system. If this is the case, then you can enter the following command:
 ````
 ionic cordova build android
 ````
+
+On a MacOS computer with Xcode installed you can also build the app for iOS.
 
 <br>
 
