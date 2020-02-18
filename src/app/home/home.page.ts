@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -12,23 +12,11 @@ export class HomePage {
 
   /**
    * Konstruktor mit leerem Rumpf wird benötigt, um AlertController-
-   * Instanz als Member-Variable zu erhalten.
+   * und ToastController-Instanz als Member-Variable zu erhalten.
    */
-  constructor(private alertCtrl: AlertController) {}
+  constructor(private alertCtrl      : AlertController,
+              private toastController: ToastController ) {}
 
-
-  /**
-   * Alert anzeigen, siehe auch https://ionicframework.com/docs/api/alert
-   */
-  async zeigeDialog(titel: string, nachricht: string) {
-
-    const meinAlert =
-          await this.alertCtrl.create({header   : titel,
-                                       message: nachricht,
-                                       buttons : [ "Ok" ]
-                                      });
-    await meinAlert.present();
-  }
 
   /**
    * Event-Handler für Button 1 zum Anzeigen Begrüßung.
@@ -44,10 +32,10 @@ export class HomePage {
 
       } else {
 
-          this.zeigeDialog( "Fehler",
-                            "Kein Name eingegeben." );
+          this.zeigeToast( "Kein Name eingegeben." );
       }
   }
+
 
   /**
    * Event-Handler für Button 2 zum Löschen.
@@ -55,6 +43,33 @@ export class HomePage {
   onLoeschButton() {
 
     this.eingabeName = "";
+  }
+
+
+  /**
+   * Alert anzeigen, siehe auch https://ionicframework.com/docs/api/alert
+   */
+  async zeigeDialog(titel: string, nachricht: string) {
+
+    const meinAlert =
+          await this.alertCtrl.create({header   : titel,
+                                       message: nachricht,
+                                       buttons : [ "Ok" ]
+                                      });
+    await meinAlert.present();
+  }
+
+
+  /**
+   * Toast anzeigen, siehe auch https://ionicframework.com/docs/api/toast
+   */
+  async zeigeToast(nachricht: string) {
+
+    const toast =
+          await this.toastController.create({ message: nachricht,
+                                              duration: 2000
+                                            });
+    await toast.present();
   }
 
 }
