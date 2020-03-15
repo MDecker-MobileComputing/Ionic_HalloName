@@ -52,9 +52,9 @@ export class HomePage {
   async zeigeDialog(titel: string, nachricht: string) {
 
     const meinAlert =
-          await this.alertCtrl.create({header  : titel,
-                                       message : nachricht,
-                                       buttons : [ "Ok" ]
+          await this.alertCtrl.create({ header  : titel,
+                                        message : nachricht,
+                                        buttons : [ "Ok" ]
                                       });
     await meinAlert.present();
   }
