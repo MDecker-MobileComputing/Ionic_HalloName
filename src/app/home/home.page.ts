@@ -29,7 +29,6 @@ export class HomePage {
 
           this.zeigeDialog( "Begrüßung",
                             `Hallo ${eingabeString}!` );
-
       } else {
 
           this.zeigeToast( "Kein Name eingegeben." );
