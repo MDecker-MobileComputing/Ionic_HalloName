@@ -44,7 +44,7 @@ To build the app for Android (i.e. to get the APK file) you need to have [Cordov
 ionic cordova build android
 ````
 
-On a MacOS computer with Xcode installed you can also build the app for iOS.
+On a MacOS computer with [Xcode](https://developer.apple.com/xcode/) installed you can also build the app for iOS.
 
 <br>
 
