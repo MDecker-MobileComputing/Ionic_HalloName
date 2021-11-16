@@ -37,18 +37,6 @@ ionic serve --lab
 <br>
 
 ----
-## Build the app for Android ##
-
-To build the app for Android (i.e. to get the APK file) you need to have [Cordova](https://www.npmjs.com/package/cordova) configured on your system. If this is the case, then you can enter the following command:
-````
-ionic cordova build android
-````
-
-On a MacOS computer with [Xcode](https://developer.apple.com/xcode/) installed you can also build the app for iOS.
-
-<br>
-
-----
 ## License ##
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License)
