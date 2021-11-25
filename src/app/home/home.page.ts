@@ -52,7 +52,7 @@ export class HomePage {
   async zeigeDialog(titel: string, nachricht: string) {
 
     const meinAlert =
-          await this.alertCtrl.create({ 
+          await this.alertCtrl.create({
               header  : titel,
               message : nachricht,
               buttons : [ "Ok" ]
@@ -68,9 +68,9 @@ export class HomePage {
   async zeigeToast(nachricht: string) {
 
     const toast =
-          await this.toastController.create({ 
+          await this.toastController.create({
               message : nachricht,
-              duration: 2000  // 2000 ms = 2 seconds
+              duration: 2000  // 2000 ms = 2 Sekunden
           });
 
     await toast.present();
