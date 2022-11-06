@@ -1,6 +1,6 @@
 # Ionic app "Hallo Name" #
 
-Simple app with [Ionic 4](https://ionicframework.com) with just one page, which demonstrates how
+Simple app with [Ionic](https://ionicframework.com) with just one page, which demonstrates how
 to implement event handling methods for buttons and how to access the value of a text input element.
 
 <br>

@@ -1,7 +1,6 @@
 {
   "name": "HalloName",
   "integrations": {
-    "cordova": {},
     "capacitor": {}
   },
   "type": "angular"

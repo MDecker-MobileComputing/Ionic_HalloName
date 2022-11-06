@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package de.mide.ionic.halloname;
 
 import com.getcapacitor.BridgeActivity;
 
