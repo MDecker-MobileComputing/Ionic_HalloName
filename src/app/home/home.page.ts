@@ -18,7 +18,6 @@ export class HomePage {
   constructor( private alertCtrl      : AlertController,
                private toastController: ToastController ) {}
 
-
   /**
    * Event-Handler für Button 1 zum Anzeigen Begrüßung.
    */
