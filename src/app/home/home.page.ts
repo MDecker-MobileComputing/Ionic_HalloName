@@ -9,7 +9,7 @@ import { AlertController, ToastController } from '@ionic/angular';
 export class HomePage {
 
   /** Member-Variable, ist mit Two-Way-Binding an <ion-input>-Element gebunden. */
-  private eingabeName : string = "";
+  public eingabeName : string = "";
 
   /**
    * Konstruktor mit leerem Rumpf wird benötigt, um AlertController-
