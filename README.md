@@ -1,11 +1,14 @@
 # Ionic app "Hallo Name" #
 
+<br>
+
 Simple app with [Ionic](https://ionicframework.com) with just one page, which demonstrates how
 to implement event handling methods for buttons and how to access the value of a text input element.
 
 <br>
 
 ----
+
 ## Screenshots ##
 
 ![Screenshot taken from "Ionic Labs" (left: Android; right: iOS)](screenshot.png)
@@ -15,7 +18,10 @@ Screenshot was taken from [Ionic Lab](https://blog.ionicframework.com/ionic-lab/
 <br>
 
 ----
+
 ## Run the app locally ##
+
+<br>
 
 After cloning this repository enter the following command to download all the required NPM packages into folder `node_modules`:
 ````
@@ -37,7 +43,12 @@ ionic serve --lab
 <br>
 
 ----
+
 ## License ##
+
+<br>
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License)
 for the files in this repository.
+
+<br>
