@@ -6,23 +6,19 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        node-version: [18.x, 20.x]
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Code auschecken
+      uses: actions/checkout@v4 # neueste Version siehe https://github.com/actions/checkout/releases
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - name: Node.js einrichten
+      uses: actions/setup-node@v4 # neueste Version siehe https://github.com/actions/setup-node/releases
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 20.x
 
-    - name: Cache Node.js modules
-      uses: actions/cache@v2
+    - name: Node-Cache
+      uses: actions/cache@v4 # neueste Version siehe https://github.com/actions/cache/releases
       with:
         path: ~/.npm
         key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -30,13 +26,10 @@ jobs:
           ${{ runner.OS }}-node-
           ${{ runner.OS }}-
 
-    - name: Install Dependencies
-      run: npm ci # besonders "sauberer Build", z.B. node_modules ggf. löschen
+    - name: Abhängigkeiten installieren
+       run: npm clean-install # node_modules/ ggf. löschen
 
-    - name: Build Ionic App
+    - name: Ionic-App bauen
       run: |
         npm install -g @ionic/cli
         ionic build
-
-#    - name: Run Tests
-#      run: npm run test
