@@ -27,7 +27,7 @@ jobs:
           ${{ runner.OS }}-
 
     - name: Abhängigkeiten installieren
-       run: npm clean-install # node_modules/ ggf. löschen
+       run: npm ci # ci: Continuous Integration, nur package-lock.json wird ausgewertet
 
     - name: Ionic-App bauen
       run: |
