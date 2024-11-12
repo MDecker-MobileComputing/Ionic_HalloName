@@ -1,8 +1,5 @@
 {
 	"appId": "de.mide.ionic.halloname",
 	"appName": "HalloName",
-	"webDir": "www",
-	"server": {
-		"androidScheme": "https"
-	}
+	"webDir": "www"
 }

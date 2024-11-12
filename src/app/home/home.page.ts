@@ -23,9 +23,9 @@ export class HomePage {
    */
   onBegruessenButton() {
 
-      let eingabeString : string = this.eingabeName.trim();
+      const eingabeString : string = this.eingabeName.trim();
 
-      if (eingabeString.length > 0) {
+      if ( eingabeString.length > 0 ) {
 
           this.zeigeDialog( "Begrüßung",
                             `Hallo ${eingabeString}!` );
@@ -48,7 +48,7 @@ export class HomePage {
   /**
    * Alert anzeigen, siehe auch https://ionicframework.com/docs/api/alert
    */
-  async zeigeDialog(titel: string, nachricht: string) {
+  async zeigeDialog( titel: string, nachricht: string ) {
 
     const meinAlert =
           await this.alertCtrl.create({
@@ -64,7 +64,7 @@ export class HomePage {
   /**
    * Toast anzeigen, siehe auch https://ionicframework.com/docs/api/toast
    */
-  async zeigeToast(nachricht: string) {
+  async zeigeToast( nachricht: string ) {
 
     const toast =
           await this.toastController.create({
