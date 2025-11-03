@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonButton, IonLabel, IonInput } from '@ionic/angular/standalone';
 import { AlertController, ToastController } from '@ionic/angular';
-import { FormsModule } from '@angular/forms'; // wegen ngModel
 
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonButton, IonLabel, IonInput, FormsModule],
+  standalone: false
 })
 export class HomePage {
 
@@ -21,7 +19,6 @@ export class HomePage {
    */
   constructor( private alertCtrl      : AlertController,
                private toastController: ToastController ) {}
-
 
   /**
    * Event-Handler für Button 1 zum Anzeigen Begrüßung.
@@ -79,6 +76,5 @@ export class HomePage {
 
     await toast.present();
   }
-
 
 }
