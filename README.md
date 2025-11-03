@@ -35,11 +35,6 @@ ionic serve
 ````
 This should open the app in your local browser at the following URL: http://localhost:8100/home
 
-A more comfortable preview mode is "Ionic Lab", which can be started with the following command:
-````
-ionic serve --lab
-````
-
 <br>
 
 ----
