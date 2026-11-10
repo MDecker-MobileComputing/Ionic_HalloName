@@ -7,7 +7,7 @@ die die Implementierung eines einfachen Button-Event-Handlers zeigt.
 
 <br>
 
-Die App kann unter der folgenden URL direkt getestet werden:
+Die App kann unter der folgenden URL direkt im Browser getestet werden:
 
 https://mdecker-mobilecomputing.github.io/Ionic_HalloName/
 
