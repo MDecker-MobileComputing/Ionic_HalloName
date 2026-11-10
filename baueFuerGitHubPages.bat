@@ -7,5 +7,6 @@
 
 ionic build -- --base-href "https://mdecker-mobilecomputing.github.io/Ionic_HalloName/"
 
-@REM Die base-href ist hier hardcodiert für GitHub Pages. Der output-path "docs" ist in angular.json konfiguriert.
+@REM Die base-href ist hier hardcodiert für GitHub Pages. Zusätzlich muss in angular.json unter
+@REM projects > app > architect > build > options > outputPath > base der Wert "docs" gesetzt sein.
 @REM Für lokale Entwicklung ("ionic serve") funktioniert die default base-href davon.
