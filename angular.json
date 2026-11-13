@@ -14,7 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "docs",
+              "base": "www",
               "browser": ""
             },
             "index": "src/index.html",
@@ -67,6 +67,13 @@
             },
             "ci": {
               "progress": false
+            },
+            "github-pages": {
+              "baseHref": "https://mdecker-mobilecomputing.github.io/Ionic_HalloName/",
+              "outputPath": {
+                "base": "docs",
+                "browser": ""
+              }
             }
           },
           "defaultConfiguration": "production"

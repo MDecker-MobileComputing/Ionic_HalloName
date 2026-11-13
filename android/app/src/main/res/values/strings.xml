@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HalloName</string>
+    <string name="title_activity_main">HalloName</string>
+    <string name="package_name">de.mide.ionic.halloname</string>
+    <string name="custom_url_scheme">de.mide.ionic.halloname</string>
+</resources>
